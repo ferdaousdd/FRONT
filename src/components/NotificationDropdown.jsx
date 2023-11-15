@@ -80,7 +80,7 @@ const NotificationDropdown = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/notification/', {
+        const response = await fetch('http://10.1.20.31:8000/api/user/notification/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ const handleNotificationClick = (notification) => {
     // Update the notification status to "read" on the server
     const markNotificationAsRead = async () => {
       try {
-        await fetch(`http://127.0.0.1:8000/api/user/notif/${notification.notif.id}/`, {
+        await fetch(`http://10.1.20.31:8000/api/user/notif/${notification.notif.id}/`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ console.log(notification.zone[0].id)
     // Update the notification status to "read" on the server
     const markNotificationAsRead = async () => {
       try {
-        await fetch(`http://127.0.0.1:8000/api/user/zone/${notification.zone[0].id}/`, {
+        await fetch(`http://10.1.20.31:8000/api/user/zone/${notification.zone[0].id}/`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ console.log(notification.zone[0].id)
     markNotificationAsRead();
     const DeleteNotification = async () => {
       try {
-        await fetch(`http://127.0.0.1:8000/api/user/noti/${notification.notif.id}/`, {
+        await fetch(`http://10.1.20.31:8000/api/user/noti/${notification.notif.id}/`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

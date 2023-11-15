@@ -12,7 +12,7 @@ const PieChart = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/user/points/", {
+        const response = await fetch("http://10.1.20.31:8000/api/user/points/", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -43,7 +43,7 @@ const PieChart = () => {
     setSelectedLineString(lineStringId);
     // Fetch segments for the selected LineString
     // try {
-    //   const response = await fetch(http://127.0.0.1:8000/api/user/line-strings/${lineStringId}/segments/?selectedDate=${selectedDate}, {
+    //   const response = await fetch(http://10.1.20.31:8000/api/user/line-strings/${lineStringId}/segments/?selectedDate=${selectedDate}, {
     //     method: "GET",
     //     headers: {
     //       "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const PieChart = () => {
 
   const updateFeatureCoordinates = (id, selectedDate) => {
     console.log(selectedDate)
-    fetch(`http://127.0.0.1:8000/api/user/line-strings/${id}/segments/?date=${selectedDate}`)
+    fetch(`http://10.1.20.31:8000/api/user/line-strings/${id}/segments/?date=${selectedDate}`)
       .then((response) => response.json())
       .then((data) => setSegments(data))
       .catch((error) => console.error(error));

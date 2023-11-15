@@ -71,7 +71,7 @@ const Dashboard = () => {
 
       const fetchUserData = async () => {
         try {
-          const response = await fetch('http://127.0.0.1:8000/api/user/All_user/', {
+          const response = await fetch('http://10.1.20.31:8000/api/user/All_user/', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const Dashboard = () => {
     useEffect(() => {
       const fetchUserData = async () => {
         try {
-          const response = await fetch("http://127.0.0.1:8000/api/user/linestrings/", {
+          const response = await fetch("http://10.1.20.31:8000/api/user/linestrings/", {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
@@ -118,7 +118,7 @@ const Dashboard = () => {
       setselectedSegment(selectedId);
       const fetchUserData = async () => {
         try {
-          const response = await fetch(`http://127.0.0.1:8000/api/user/parametre/${selectedId}/`, {
+          const response = await fetch(`http://10.1.20.31:8000/api/user/parametre/${selectedId}/`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
@@ -146,7 +146,7 @@ const Dashboard = () => {
       setSelectedPoint(selectedId);
       const fetchUserData = async () => {
         try {
-          const response = await fetch(`http://127.0.0.1:8000/api/user/parametreweather/${selectedId}/`, {
+          const response = await fetch(`http://10.1.20.31:8000/api/user/parametreweather/${selectedId}/`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",

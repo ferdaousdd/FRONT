@@ -18,7 +18,7 @@ const WaterLevelChart = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/user/linestrings/", {
+        const response = await fetch("http://10.1.20.31:8000/api/user/linestrings/", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const WaterLevelChart = () => {
 
   // const updateFeatureCoordinates = (id, selectedDate) => {
   //   console.log(selectedDate)
-  //   fetch(`http://127.0.0.1:8000/api/user/linestring/water-levels/${id}/?selectedDate=${selectedDate}`)
+  //   fetch(`http://10.1.20.31:8000/api/user/linestring/water-levels/${id}/?selectedDate=${selectedDate}`)
   //     .then((response) => response.json())
   //     .then((data) => setData(data))
   //     .catch((error) => console.error(error));
@@ -61,14 +61,14 @@ const updateFeatureCoordinates = (id) => {
   
   const now = moment().format("YYYY-MM-DD"); // Get the current date in the desired format
   console.log(now)
-  fetch(`http://127.0.0.1:8000/api/user/linestring/water-levels/${id}/?selectedDate=${now}`)
+  fetch(`http://10.1.20.31:8000/api/user/linestring/water-levels/${id}/?selectedDate=${now}`)
     .then((response) => response.json())
     .then((data) => setData(data))
     .catch((error) => console.error(error));
 };
    useEffect(() => {
     // Fetch the segment data from the backend API
-    fetch('http://127.0.0.1:8000/api/user/segment/')
+    fetch('http://10.1.20.31:8000/api/user/segment/')
     .then((response) => response.json())
     .then((data) => setSegmentsData(data))
     .catch((error) => console.error(error));

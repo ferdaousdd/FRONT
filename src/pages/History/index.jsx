@@ -25,7 +25,7 @@ const History = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/history/', {
+        const response = await fetch('http://10.1.20.31:8000/api/user/history/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const showSuccessDelete = (id) => {
   console.log(id)
   const deleteData = async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/user/history/${id}/`, {
+      const response = await fetch(`http://10.1.20.31:8000/api/user/history/${id}/`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

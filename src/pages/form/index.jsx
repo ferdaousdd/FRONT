@@ -42,7 +42,7 @@ const Form = () => {
     const handleFormSubmit = async (values) => {
       // event.preventDefault()
       console.log(values)
-        await axios.post('http://127.0.0.1:8000/rest/userviewsets/', values)
+        await axios.post('http://10.1.20.31:8000/rest/userviewsets/', values)
         .then(response=>console.log(response))
        .catch (err=>console.log(err))
        toast.current.show({severity:'success', summary: 'Success', detail:'User created', life: 2000});

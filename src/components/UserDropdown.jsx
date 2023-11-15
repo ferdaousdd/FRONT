@@ -68,7 +68,7 @@ const UserDropdown = () => {
 
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/profile/', {
+        const response = await fetch('http://10.1.20.31:8000/api/user/profile/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ const UserDropdown = () => {
     setAnchorEl(event.currentTarget)
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/profile/', {
+        const response = await fetch('http://10.1.20.31:8000/api/user/profile/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

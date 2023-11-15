@@ -18,7 +18,7 @@ const BarChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/points/');
+        const response = await fetch('http://10.1.20.31:8000/api/user/points/');
         const data = await response.json();
         setSegments(data);
       } catch (error) {
@@ -48,7 +48,7 @@ const BarChart = () => {
   };
   const fetchData = () => {
     if (selectedZone && selectedParameter && selectedDate) {
-      fetch(`http://127.0.0.1:8000/api/user/parame/?selectedZone=${selectedZone}&selectedParameter=${selectedParameter}&selectedDate=${selectedDate}`)
+      fetch(`http://10.1.20.31:8000/api/user/parame/?selectedZone=${selectedZone}&selectedParameter=${selectedParameter}&selectedDate=${selectedDate}`)
         .then((response) => response.json())
         .then((data) => setData(data.data))
         .catch((error) => console.error(error));

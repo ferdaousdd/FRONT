@@ -49,7 +49,7 @@ const Contacts = () => {
 
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/All_user/', {
+        const response = await fetch('http://10.1.20.31:8000/api/user/All_user/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -174,7 +174,7 @@ const handleShow = async () => {
   formData.append('image_url', userData.image_url);
 
   try {
-    const response = await axios.post('http://127.0.0.1:8000/api/user/register/', formData, {
+    const response = await axios.post('http://10.1.20.31:8000/api/user/register/', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
         Authorization: `Bearer ${access_token}`,
@@ -189,7 +189,7 @@ const handleShow = async () => {
       setUserData({});
       setshowAddUsersDialog(false);
 
-      const usersResponse = await axios.get('http://127.0.0.1:8000/api/user/All_user/', {
+      const usersResponse = await axios.get('http://10.1.20.31:8000/api/user/All_user/', {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${access_token}`,
@@ -231,7 +231,7 @@ const handleShow = async () => {
 //   setUserData({});
 //   setshowAddUsersDialog(false);
 //   try {
-//   const response = await fetch('http://127.0.0.1:8000/api/user/All_user/', {
+//   const response = await fetch('http://10.1.20.31:8000/api/user/All_user/', {
 //   method: 'GET',
 //   headers: {
 //   'Content-Type': 'application/json',
@@ -267,7 +267,7 @@ const handleShow = async () => {
 //     setUserData({})
 //     setshowAddUsersDialog(false);
 //     try {
-//       const response = await fetch('http://127.0.0.1:8000/api/user/All_user/', {
+//       const response = await fetch('http://10.1.20.31:8000/api/user/All_user/', {
 //         method: 'GET',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -323,7 +323,7 @@ const  showSuccessEdit = async(id,user) => {
     // setUserData({})
     setUserEditData({})
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/user/All_user/', {
+      const response = await fetch('http://10.1.20.31:8000/api/user/All_user/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

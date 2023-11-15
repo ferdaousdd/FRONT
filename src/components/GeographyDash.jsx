@@ -94,7 +94,7 @@ function GeographyDash() {
 
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/linestrings/', {
+        const response = await fetch('http://10.1.20.31:8000/api/user/linestrings/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ function GeographyDash() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/points/');
+        const response = await fetch('http://10.1.20.31:8000/api/user/points/');
         const data = await response.json();
         setPoints(data);
 

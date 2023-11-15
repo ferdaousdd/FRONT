@@ -106,7 +106,7 @@ useEffect(() => {
     console.log('long:', newCoords[0]);
     console.log('latit:', newCoords[1]);
     // Make an API call to update the feature on the server
-    fetch(`http://127.0.0.1:8000/api/user/points/${id}/`, {
+    fetch(`http://10.1.20.31:8000/api/user/points/${id}/`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -133,7 +133,7 @@ useEffect(() => {
     }
     
     function deleteSelectedSegment(id) {
-      fetch(`http://127.0.0.1:8000/api/user/segments/${id}/`, {
+      fetch(`http://10.1.20.31:8000/api/user/segments/${id}/`, {
         method: 'DELETE'
       })
       .then(response => {
@@ -167,7 +167,7 @@ useEffect(() => {
     }
    
     function deleteSelectedPoint(id) {
-      fetch(`http://127.0.0.1:8000/api/user/points/${id}/`, {
+      fetch(`http://10.1.20.31:8000/api/user/points/${id}/`, {
         method: 'DELETE'
       })
       .then(response => {
@@ -191,7 +191,7 @@ useEffect(() => {
       .catch(error => console.error(error));
     }
     function deleteSelectedLine(id) {
-      fetch(`http://127.0.0.1:8000/api/user/line_delete/${id}/`, {
+      fetch(`http://10.1.20.31:8000/api/user/line_delete/${id}/`, {
         method: 'DELETE'
       })
       .then(response => {
@@ -640,7 +640,7 @@ console.log(temperature)
 useEffect(() => {
   const fetchUserData = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/user/linestrings/', {
+      const response = await fetch('http://10.1.20.31:8000/api/user/linestrings/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -683,7 +683,7 @@ const handleSubmit1 = useCallback(async ( clickedCoordinate ,zone,selectedPoint 
   };
 console.log(actualData)
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/user/linestrings/', {
+    const response = await fetch('http://10.1.20.31:8000/api/user/linestrings/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify( actualData )
@@ -702,7 +702,7 @@ console.log(actualData)
           life: 2000,
         });
       }
-      fetch('http://127.0.0.1:8000/api/user/segment/')
+      fetch('http://10.1.20.31:8000/api/user/segment/')
     .then((response) => response.json())
     .then((data) => setSegments(data))
     .catch((error) => console.error(error));
@@ -725,7 +725,7 @@ console.log(actualData)
 useEffect(() => {
   const fetchData = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/user/points/');
+      const response = await fetch('http://10.1.20.31:8000/api/user/points/');
       const data = await response.json();
       setPoints(data);
     } catch (error) {
@@ -742,7 +742,7 @@ useEffect(() => {
 const handleSubmit = useCallback(async ( name , event ) => {
   event.preventDefault();
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/user/points/', {
+    const response = await fetch('http://10.1.20.31:8000/api/user/points/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ longitude, latitude , name  })
@@ -776,7 +776,7 @@ const handleSubmit = useCallback(async ( name , event ) => {
 
 useEffect(() => {
   // Fetch the segment data from the backend API
-  fetch('http://127.0.0.1:8000/api/user/segment/')
+  fetch('http://10.1.20.31:8000/api/user/segment/')
     .then((response) => response.json())
     .then((data) => setSegments(data))
     .catch((error) => console.error(error));
